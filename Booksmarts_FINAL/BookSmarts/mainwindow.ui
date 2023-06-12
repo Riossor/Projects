@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>525</width>
+    <height>297</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>BookSmarts</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="verticalLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>160</width>
+      <height>228</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <widget class="QLabel" name="lblBookSearch">
+       <property name="text">
+        <string>Choose book to get info:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="comboBox"/>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnSearchBook">
+       <property name="text">
+        <string>Add Books for Search</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnDisplayBooks">
+       <property name="text">
+        <string>Display All Books</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnAddBook">
+       <property name="text">
+        <string>Add Book</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnUpdateQ">
+       <property name="text">
+        <string>Update Quantity</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnAddCheck">
+       <property name="text">
+        <string>Add to Checkout</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnCheckout">
+       <property name="text">
+        <string>Checkout</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget_4">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>20</y>
+      <width>221</width>
+      <height>201</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_4">
+     <item>
+      <widget class="QLabel" name="lblBookOutput">
+       <property name="text">
+        <string>Output:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QTextBrowser" name="txtBookOutput"/>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>31</y>
+      <width>83</width>
+      <height>201</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QPushButton" name="btnDBCreate">
+       <property name="text">
+        <string>Load DB</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnCreateTable">
+       <property name="text">
+        <string>Load Table</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnBookCount">
+       <property name="text">
+        <string>Count Books</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="extBtn">
+       <property name="text">
+        <string>Exit</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="lblBookCount">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>300</y>
+      <width>71</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Book Count: </string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblBookCountNumber">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>300</y>
+      <width>49</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>525</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuBook_Library">
+    <property name="title">
+     <string>Book Library</string>
+    </property>
+    <addaction name="actionClose"/>
+    <addaction name="actionAdd_Book"/>
+   </widget>
+   <widget class="QMenu" name="menuBook_Store">
+    <property name="title">
+     <string>More</string>
+    </property>
+    <addaction name="actionMore"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionSpecs"/>
+    <addaction name="actionNotes"/>
+   </widget>
+   <widget class="QMenu" name="menuExtra">
+    <property name="title">
+     <string>Extra</string>
+    </property>
+    <addaction name="actionwow"/>
+    <addaction name="actionMost_Important_Option"/>
+   </widget>
+   <addaction name="menuBook_Library"/>
+   <addaction name="menuHelp"/>
+   <addaction name="menuBook_Store"/>
+   <addaction name="menuExtra"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionMore">
+   <property name="text">
+    <string>About Us</string>
+   </property>
+  </action>
+  <action name="actionClose">
+   <property name="text">
+    <string>Close</string>
+   </property>
+  </action>
+  <action name="actionHelp">
+   <property name="text">
+    <string>Help</string>
+   </property>
+  </action>
+  <action name="actionSpecs">
+   <property name="text">
+    <string>Specs</string>
+   </property>
+  </action>
+  <action name="actionAdd_Book">
+   <property name="text">
+    <string>Add Book</string>
+   </property>
+  </action>
+  <action name="actionAdd_User">
+   <property name="text">
+    <string>Load UI</string>
+   </property>
+  </action>
+  <action name="actionMy_Books">
+   <property name="text">
+    <string>My Books</string>
+   </property>
+  </action>
+  <action name="actionHow_Many_Read">
+   <property name="text">
+    <string>How Many Read</string>
+   </property>
+  </action>
+  <action name="actionChange_Password">
+   <property name="text">
+    <string>Change Password</string>
+   </property>
+  </action>
+  <action name="actionLoad_Ui">
+   <property name="text">
+    <string>Load Ui</string>
+   </property>
+  </action>
+  <action name="actionNotes">
+   <property name="text">
+    <string>Notes</string>
+   </property>
+  </action>
+  <action name="actionwow">
+   <property name="text">
+    <string>wowPac</string>
+   </property>
+  </action>
+  <action name="actionMost_Important_Option">
+   <property name="text">
+    <string>Most Important Option</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>extBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>740</x>
+     <y>560</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnDBCreate</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>CreateDB()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>519</x>
+     <y>52</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>305</x>
+     <y>194</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnCreateTable</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>CreateTable()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>540</x>
+     <y>99</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>305</x>
+     <y>194</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnDisplayBooks</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>ReadTable()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>159</x>
+     <y>151</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>305</x>
+     <y>194</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBox</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>comboBoxChange()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>99</x>
+     <y>78</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>264</x>
+     <y>115</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnSearchBook</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>BooksToCB()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>99</x>
+     <y>108</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>264</x>
+     <y>115</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionMore</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>aboutUsLoad()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>264</x>
+     <y>115</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionClose</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>264</x>
+     <y>115</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnBookCount</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>displaySize()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>460</x>
+     <y>133</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>264</x>
+     <y>115</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionSpecs</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>specsLoad()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>264</x>
+     <y>115</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionAdd_Book</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>addbookLoad()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>262</x>
+     <y>135</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnAddCheck</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>addBookToList()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>99</x>
+     <y>195</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>262</x>
+     <y>135</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnCheckout</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>Checkout()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>99</x>
+     <y>225</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>262</x>
+     <y>135</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnAddBook</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>addbookLoad()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>99</x>
+     <y>165</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>262</x>
+     <y>135</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionNotes</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>noteLoad()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>262</x>
+     <y>148</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnUpdateQ</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>updateQLoad()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>99</x>
+     <y>195</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>262</x>
+     <y>148</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionMost_Important_Option</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>mostImportantButton()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>262</x>
+     <y>148</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionwow</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>wowPac()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>262</x>
+     <y>148</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>CreateDB()</slot>
+  <slot>CreateTable()</slot>
+  <slot>ReadTable()</slot>
+  <slot>BooksToCB()</slot>
+  <slot>comboBoxChange()</slot>
+  <slot>aboutUsLoad()</slot>
+  <slot>displaySize()</slot>
+  <slot>specsLoad()</slot>
+  <slot>addBookToList()</slot>
+  <slot>addbookLoad()</slot>
+  <slot>Checkout()</slot>
+  <slot>noteLoad()</slot>
+  <slot>updateQLoad()</slot>
+  <slot>wowPac()</slot>
+  <slot>mostImportantButton()</slot>
+ </slots>
+</ui>
